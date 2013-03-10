@@ -3,9 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Champion Profiler" Height="600" Width="425" ResizeMode="CanMinimize" Background="#FF353535">
     <Grid x:Name="ChampionProfile">
-        <Image Margin="11,11,288,441" Source="AhriLarge.png"/>
+        <Image Margin="11,11,288,441" Source="/ChampionProfiler;component/Images/AhriLarge.png"/>
         <Label Content="Active Profile" HorizontalAlignment="Left" Margin="137,16,0,0" VerticalAlignment="Top" Foreground="#FFCCCCCC" FontSize="15"/>
-        <Label Content="Ahri" HorizontalAlignment="Left" Margin="147,43,0,0" VerticalAlignment="Top" FontSize="40" Foreground="White"/>
+        <Label Content="Ahri" HorizontalAlignment="Right" Margin="0,43,174,0" VerticalAlignment="Top" FontSize="40" Foreground="White"/>
         <Button Content="Switch Profile" HorizontalAlignment="Left" Margin="308,107,0,0" VerticalAlignment="Top" Width="90"/>
         <Ellipse Fill="#FF00FF00" HorizontalAlignment="Left" Height="10" Margin="235,27,0,0" Stroke="Black" VerticalAlignment="Top" Width="10"/>
         <Label Content="Command" HorizontalAlignment="Left" Margin="21,151,0,0" VerticalAlignment="Top" Foreground="#FFCCCCCC"/>

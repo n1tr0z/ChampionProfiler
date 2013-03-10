@@ -29,9 +29,18 @@ namespace ChampionProfiler
         {
             //MessageBox.Show("Shit is Working");
             Profile profile = new Profile();
+            profile.Show();
             //profile.Owner = this;
+        }
 
+        private void expander1_Expanded(object sender, RoutedEventArgs e)
+        {
+            this.Height += expander1.Height;
+        }
 
+        private void expander1_Collapsed(object sender, RoutedEventArgs e)
+        {
+            this.Height -= expander1.Height;
         }
     }
 }
