@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ChampionProfiler</RootNamespace>
     <AssemblyName>ChampionProfiler</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -102,36 +102,40 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="title.png" />
+    <Resource Include="Images\title.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="AhriSquare.png" />
+    <Resource Include="Images\AhriSquare.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="AkaliSquare.png" />
+    <Resource Include="Images\AkaliSquare.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="AlistarSquare.png" />
+    <Resource Include="Images\AlistarSquare.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="AmumuSquare.png" />
+    <Resource Include="Images\AmumuSquare.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="AniviaSquare.png" />
+    <Resource Include="Images\AniviaSquare.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="AnnieSquare.png" />
+    <Resource Include="Images\AnnieSquare.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="AsheSquare.png" />
+    <Resource Include="Images\AsheSquare.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="AhriLarge.png" />
+    <Resource Include="Images\AhriLarge.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="settings.xml">
+    <Resource Include="SettingsResources\settings.xml">
       <SubType>Designer</SubType>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Audio\" />
+    <Folder Include="Classes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
