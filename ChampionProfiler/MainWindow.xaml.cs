@@ -28,19 +28,14 @@ namespace ChampionProfiler
         private void load_Champion(object sender, RoutedEventArgs e)
         {
             //MessageBox.Show("Shit is Working");
-            Profile profile = new Profile();
-            profile.Show();
-            //profile.Owner = this;
+            this.ChampionSelect.Visibility = Visibility.Collapsed;
+            this.ChampionProfile.Visibility = Visibility.Visible;
         }
 
-        private void expander1_Expanded(object sender, RoutedEventArgs e)
+        private void load_mainwindow(object sender, RoutedEventArgs e)
         {
-            this.Height += expander1.Height;
-        }
-
-        private void expander1_Collapsed(object sender, RoutedEventArgs e)
-        {
-            this.Height -= expander1.Height;
+            this.ChampionProfile.Visibility = Visibility.Collapsed;
+            this.ChampionSelect.Visibility = Visibility.Visible;
         }
     }
 }
