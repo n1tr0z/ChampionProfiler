@@ -7,10 +7,10 @@
     <evtCastSpell4>r</evtCastSpell4>
     <evtCastAvatarSpell1>d</evtCastAvatarSpell1>
     <evtCastAvatarSpell2>f</evtCastAvatarSpell2>
-    <evtLevelSpell1>crtl q</evtLevelSpell1>
-    <evtLevelSpell2>crtl w</evtLevelSpell2>
-    <evtLevelSpell3>crtl e</evtLevelSpell3>
-    <evtLevelSpell4>crtl r</evtLevelSpell4>
+    <evtLevelSpell1>ctrl q</evtLevelSpell1>
+    <evtLevelSpell2>ctrl w</evtLevelSpell2>
+    <evtLevelSpell3>ctrl e</evtLevelSpell3>
+    <evtLevelSpell4>ctrl r</evtLevelSpell4>
     <evtSelfCastSpell1>alt q</evtSelfCastSpell1>
     <evtSelfCastSpell2>alt w</evtSelfCastSpell2>
     <evtSelfCastSpell3>alt e</evtSelfCastSpell3>

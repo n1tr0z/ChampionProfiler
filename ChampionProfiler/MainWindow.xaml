@@ -3,60 +3,655 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Champion Profiler" Height="600" Width="425" ResizeMode="CanMinimize" Background="#FF353535">
     <Grid>
-        <Grid x:Name="ChampionSelect">      
-            <Image Margin="17,30,183,183" Source="/ChampionProfiler;component/Images/title.png" VerticalAlignment="Top"/>
+        <Grid x:Name="ChampionSelect">
+            <Image x:Name="profileImage" Margin="17,30,183,183" Source="/ChampionProfiler;component/Images/title.png" VerticalAlignment="Top"/>
             <Label Content="Default Profile" HorizontalAlignment="Left" Margin="277,104,0,0" VerticalAlignment="Top" Foreground="#FFCCCCCC" FontSize="15"/>
             <Ellipse Fill="#FF00FF00" HorizontalAlignment="Left" Height="10" Margin="380,115,0,0" Stroke="Black" VerticalAlignment="Top" Width="10"/>
-            <Separator Margin="0,140,0,420" Background="Black"/>
+            <Separator Margin="0,140,0,420" Background="Black" IsTabStop="False"/>
             <Label Content="Select Champion" HorizontalAlignment="Left" Margin="73,147,0,0" VerticalAlignment="Top" Foreground="#FFCCCCCC"/>
             <RadioButton Content="All" HorizontalAlignment="Left" Margin="266,152,0,0" VerticalAlignment="Top" Foreground="#FFCCCCCC" IsChecked="True"/>
             <RadioButton Content="Revised" HorizontalAlignment="Left" Margin="314,152,0,0" VerticalAlignment="Top" Foreground="#FFCCCCCC"/>
-            <Button Content="" HorizontalAlignment="Left" Margin="5,174,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
-                <Button.Background>
-                    <ImageBrush ImageSource="/ChampionProfiler;component/Images/AhriSquare.png" />
-                </Button.Background>
-            </Button>
-            <Button Content="" HorizontalAlignment="Left" Margin="60,174,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali">
-                <Button.Background>
-                    <ImageBrush ImageSource="/ChampionProfiler;component/Images/AkaliSquare.png" />
-                </Button.Background>
-            </Button>
-            <Button Content="" HorizontalAlignment="Left" Margin="115,174,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar">
-                <Button.Background>
-                    <ImageBrush ImageSource="/ChampionProfiler;component/Images/AlistarSquare.png" />
-                </Button.Background>
-            </Button>
-            <Button Content="" HorizontalAlignment="Left" Margin="170,174,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu">
-                <Button.Background>
-                    <ImageBrush ImageSource="/ChampionProfiler;component/Images/AmumuSquare.png" />
-                </Button.Background>
-            </Button>
-            <Button Content="" HorizontalAlignment="Left" Margin="225,174,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia">
-                <Button.Background>
-                    <ImageBrush ImageSource="/ChampionProfiler;component/Images/AniviaSquare.png" />
-                </Button.Background>
-            </Button>
-            <Button Content="" HorizontalAlignment="Left" Margin="280,174,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie">
-                <Button.Background>
-                    <ImageBrush ImageSource="/ChampionProfiler;component/Images/AnnieSquare.png" />
-                </Button.Background>
-            </Button>
-            <Button Content="" HorizontalAlignment="Left" Margin="335,174,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ashe">
-                <Button.Background>
-                    <ImageBrush ImageSource="/ChampionProfiler;component/Images/AsheSquare.png" />
-                </Button.Background>
-            </Button>
+            <ScrollViewer Margin="0,172,0,0" UseLayoutRounding="False" Width="409" Height="381">
+            <Grid Height="875">
+                <Button Tag="Ahri" Content="" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/AhriSquare.png" />
+                    </Button.Background>
+                </Button>
+                <Button Tag="Akali" Content="" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/AkaliSquare.png" />
+                    </Button.Background>
+                </Button>
+                <Button Tag="Alistar" Content="" HorizontalAlignment="Left" Margin="115,0,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/AlistarSquare.png" />
+                    </Button.Background>
+                </Button>
+                <Button Tag="Amumu" Content="" HorizontalAlignment="Left" Margin="170,0,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/AmumuSquare.png" />
+                    </Button.Background>
+                </Button>
+                <Button Tag="Anivia" Content="" HorizontalAlignment="Left" Margin="225,0,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/AniviaSquare.png" />
+                    </Button.Background>
+                </Button>
+                <Button Tag="Annie" Content="" HorizontalAlignment="Left" Margin="280,0,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/AnnieSquare.png" />
+                    </Button.Background>
+                </Button>
+                <Button Tag="Ashe" Content="" HorizontalAlignment="Left" Margin="335,0,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ashe" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/AsheSquare.png" />
+                    </Button.Background>
+                </Button>
+                <Button Tag="Blitzcrank" Content="" HorizontalAlignment="Left" Margin="5,55,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Blitzcrank" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/BlitzcrankSquare.png" />
+                    </Button.Background>
+                </Button>
+                <Button Tag="Brand" Content="" HorizontalAlignment="Left" Margin="60,55,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Brand" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/BrandSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Caitlyn" Content="" HorizontalAlignment="Left" Margin="115,55,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Caitlyn" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/CaitlynSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Cassiopeia" Content="" HorizontalAlignment="Left" Margin="170,55,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Cassiopeia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/CassiopeiaSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="ChoGath" Content="" HorizontalAlignment="Left" Margin="225,55,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="ChoGath" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/ChoGathSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Corki" Content="" HorizontalAlignment="Left" Margin="280,55,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Corki" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/CorkiSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Darius" Content="" HorizontalAlignment="Left" Margin="335,55,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Darius" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/DariusSquare.png" />
+                    </Button.Background>
+                </Button>
+                <Button Tag="Ahri" Content="" HorizontalAlignment="Left" Margin="5,110,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/DianaSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Akali" Content="" HorizontalAlignment="Left" Margin="60,110,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/DravenSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Alistar" Content="" HorizontalAlignment="Left" Margin="115,110,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/DrMundoSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Amumu" Content="" HorizontalAlignment="Left" Margin="170,110,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/EliseSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Anivia" Content="" HorizontalAlignment="Left" Margin="225,110,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/EvelynnSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Annie" Content="" HorizontalAlignment="Left" Margin="280,110,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/EzrealSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ashe" Content="" HorizontalAlignment="Left" Margin="335,110,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ashe" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/FiddlesticksSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ahri" Content="" HorizontalAlignment="Left" Margin="5,165,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/FioraSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Akali" Content="" HorizontalAlignment="Left" Margin="60,165,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/FizzSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Alistar" Content="" HorizontalAlignment="Left" Margin="115,165,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/GalioSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Amumu" Content="" HorizontalAlignment="Left" Margin="170,165,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/GangplankSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Anivia" Content="" HorizontalAlignment="Left" Margin="225,165,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/GarenSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Annie" Content="" HorizontalAlignment="Left" Margin="280,165,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/GragasSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ashe" Content="" HorizontalAlignment="Left" Margin="335,165,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ashe" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/GravesSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ahri" Content="" HorizontalAlignment="Left" Margin="5,220,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/HecarimSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Akali" Content="" HorizontalAlignment="Left" Margin="60,220,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/HeimerdingerSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Alistar" Content="" HorizontalAlignment="Left" Margin="115,220,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/IreliaSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Amumu" Content="" HorizontalAlignment="Left" Margin="170,220,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/JannaSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Anivia" Content="" HorizontalAlignment="Left" Margin="225,220,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/JarvanIVSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Annie" Content="" HorizontalAlignment="Left" Margin="280,220,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/JaxSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ashe" Content="" HorizontalAlignment="Left" Margin="335,220,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ashe" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/JayceSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ahri" Content="" HorizontalAlignment="Left" Margin="5,275,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/KarmaSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Akali" Content="" HorizontalAlignment="Left" Margin="60,275,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/KarthusSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Alistar" Content="" HorizontalAlignment="Left" Margin="115,275,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/KassadinSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Amumu" Content="" HorizontalAlignment="Left" Margin="170,275,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/KatarinaSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Anivia" Content="" HorizontalAlignment="Left" Margin="225,275,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/KayleSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Annie" Content="" HorizontalAlignment="Left" Margin="280,275,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/KennenSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ashe" Content="" HorizontalAlignment="Left" Margin="335,275,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ashe" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/KhaZixSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ahri" Content="" HorizontalAlignment="Left" Margin="5,330,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/KogMawSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Akali" Content="" HorizontalAlignment="Left" Margin="60,330,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/LeBlancSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Alistar" Content="" HorizontalAlignment="Left" Margin="115,330,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/LeeSinSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Amumu" Content="" HorizontalAlignment="Left" Margin="170,330,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/LeonaSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Anivia" Content="" HorizontalAlignment="Left" Margin="225,330,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/LuluSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Annie" Content="" HorizontalAlignment="Left" Margin="280,330,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/LuxSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ashe" Content="" HorizontalAlignment="Left" Margin="335,330,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ashe" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/MalphiteSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ahri" Content="" HorizontalAlignment="Left" Margin="5,385,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/MalzaharSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Akali" Content="" HorizontalAlignment="Left" Margin="60,385,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/MaokaiSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Alistar" Content="" HorizontalAlignment="Left" Margin="115,385,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/MasterYiSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Amumu" Content="" HorizontalAlignment="Left" Margin="170,385,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/MissFortuneSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Anivia" Content="" HorizontalAlignment="Left" Margin="225,385,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/MordekaiserSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Annie" Content="" HorizontalAlignment="Left" Margin="280,385,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/MorganaSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ashe" Content="" HorizontalAlignment="Left" Margin="335,385,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ashe" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/NamiSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ahri" Content="" HorizontalAlignment="Left" Margin="5,440,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/NasusSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Akali" Content="" HorizontalAlignment="Left" Margin="60,440,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/NautilusSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Alistar" Content="" HorizontalAlignment="Left" Margin="115,440,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/NidaleeSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Amumu" Content="" HorizontalAlignment="Left" Margin="170,440,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/NocturneSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Anivia" Content="" HorizontalAlignment="Left" Margin="225,440,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/NunuSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Annie" Content="" HorizontalAlignment="Left" Margin="280,440,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/OlafSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ashe" Content="" HorizontalAlignment="Left" Margin="335,440,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ashe" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/OriannaSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ahri" Content="" HorizontalAlignment="Left" Margin="5,495,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/PantheonSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Akali" Content="" HorizontalAlignment="Left" Margin="60,495,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/PoppySquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Alistar" Content="" HorizontalAlignment="Left" Margin="115,495,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/QuinnSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Amumu" Content="" HorizontalAlignment="Left" Margin="170,495,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/RammusSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Anivia" Content="" HorizontalAlignment="Left" Margin="225,495,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/RenektonSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Annie" Content="" HorizontalAlignment="Left" Margin="280,495,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/RengarSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ashe" Content="" HorizontalAlignment="Left" Margin="335,495,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ashe" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/RivenSquare.png" />
+                    </Button.Background>
+                </Button>
+                <Button Tag="Ahri" Content="" HorizontalAlignment="Left" Margin="5,550,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/RumbleSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Akali" Content="" HorizontalAlignment="Left" Margin="60,550,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/RyzeSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Alistar" Content="" HorizontalAlignment="Left" Margin="115,550,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/SejuaniSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Amumu" Content="" HorizontalAlignment="Left" Margin="170,550,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/ShacoSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Anivia" Content="" HorizontalAlignment="Left" Margin="225,550,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/ShenSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Annie" Content="" HorizontalAlignment="Left" Margin="280,550,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/ShyvanaSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ashe" Content="" HorizontalAlignment="Left" Margin="335,550,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ashe" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/SingedSquare.png" />
+                    </Button.Background>
+                </Button>
+                <Button Tag="Ahri" Content="" HorizontalAlignment="Left" Margin="5,605,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/SionSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Akali" Content="" HorizontalAlignment="Left" Margin="60,605,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/SivirSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Alistar" Content="" HorizontalAlignment="Left" Margin="115,605,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/SkarnerSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Amumu" Content="" HorizontalAlignment="Left" Margin="170,605,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/SonaSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Anivia" Content="" HorizontalAlignment="Left" Margin="225,605,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/SorakaSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Annie" Content="" HorizontalAlignment="Left" Margin="280,605,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/SwainSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ashe" Content="" HorizontalAlignment="Left" Margin="335,605,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ashe" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/SyndraSquare.png" />
+                    </Button.Background>
+                </Button>
+                <Button Tag="Ahri" Content="" HorizontalAlignment="Left" Margin="5,660,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/TalonSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Akali" Content="" HorizontalAlignment="Left" Margin="60,660,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/TaricSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Alistar" Content="" HorizontalAlignment="Left" Margin="115,660,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/TeemoSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Amumu" Content="" HorizontalAlignment="Left" Margin="170,660,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/ThreshSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Anivia" Content="" HorizontalAlignment="Left" Margin="225,660,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/TristanaSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Annie" Content="" HorizontalAlignment="Left" Margin="280,660,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/TrundleSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ashe" Content="" HorizontalAlignment="Left" Margin="335,660,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ashe" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/TryndamereSquare.png" />
+                    </Button.Background>
+                </Button>
+                <Button Tag="Ahri" Content="" HorizontalAlignment="Left" Margin="5,715,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/TwistedFateSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Akali" Content="" HorizontalAlignment="Left" Margin="60,715,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/TwitchSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Alistar" Content="" HorizontalAlignment="Left" Margin="115,715,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/UdyrSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Amumu" Content="" HorizontalAlignment="Left" Margin="170,715,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/UrgotSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Anivia" Content="" HorizontalAlignment="Left" Margin="225,715,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/VarusSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Annie" Content="" HorizontalAlignment="Left" Margin="280,715,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/VayneSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ashe" Content="" HorizontalAlignment="Left" Margin="335,715,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ashe" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/VeigarSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ahri" Content="" HorizontalAlignment="Left" Margin="5,770,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/ViktorSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Akali" Content="" HorizontalAlignment="Left" Margin="60,770,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/ViSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Alistar" Content="" HorizontalAlignment="Left" Margin="115,770,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/VladimirSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Amumu" Content="" HorizontalAlignment="Left" Margin="170,770,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/VolibearSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Anivia" Content="" HorizontalAlignment="Left" Margin="225,770,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/WarwickSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Annie" Content="" HorizontalAlignment="Left" Margin="280,770,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/WukongSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Ashe" Content="" HorizontalAlignment="Left" Margin="335,770,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ashe" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/XerathSquare.png" />
+                    </Button.Background>
+                </Button>
+                <Button Tag="Ahri" Content="" HorizontalAlignment="Left" Margin="5,825,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Ahri" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/XinZhaoSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Akali" Content="" HorizontalAlignment="Left" Margin="60,825,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Akali" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/YorickSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Alistar" Content="" HorizontalAlignment="Left" Margin="115,825,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Alistar" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/ZedSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Amumu" Content="" HorizontalAlignment="Left" Margin="170,825,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Amumu" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/ZiggsSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Anivia" Content="" HorizontalAlignment="Left" Margin="225,825,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Anivia" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/ZileanSquare.png" />
+                    </Button.Background>
+                </Button>
+                    <Button Tag="Annie" Content="" HorizontalAlignment="Left" Margin="280,825,0,0" VerticalAlignment="Top" Width="50" Height="50" ToolTip="Annie" Click="load_Champion">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/ChampionProfiler;component/Images/ZyraSquare.png" />
+                    </Button.Background>
+                </Button>
+            </Grid>
+            </ScrollViewer>
         </Grid>
         <Grid x:Name="ChampionProfile" Visibility="Collapsed">
-            <Image Margin="11,11,288,441" Source="/ChampionProfiler;component/Images/AhriLarge.png"/>
+            <Image x:Name="ChampImage" Margin="11,11,288,441" Source="/ChampionProfiler;component/Images/AhriSquare.png"/>
             <Label Content="Active Profile" HorizontalAlignment="Left" Margin="137,16,0,0" VerticalAlignment="Top" Foreground="#FFCCCCCC" FontSize="15"/>
-            <Label Content="Ahri" HorizontalAlignment="Right" Margin="0,43,174,0" VerticalAlignment="Top" FontSize="40" Foreground="White"/>
+            <Label x:Name="ChampLabel" Content="Ahri" HorizontalAlignment="Right" Margin="0,43,174,0" VerticalAlignment="Top" FontSize="40" Foreground="White"/>
             <Button Content="Switch Profile" HorizontalAlignment="Left" Margin="308,107,0,0" VerticalAlignment="Top" Width="90" Click="load_mainwindow"/>
             <Ellipse Fill="#FF00FF00" HorizontalAlignment="Left" Height="10" Margin="235,27,0,0" Stroke="Black" VerticalAlignment="Top" Width="10"/>
             <Separator Margin="0,140,0,421" Background="Black"/>
-            <Label Content="Command" HorizontalAlignment="Left" Margin="21,151,0,0" VerticalAlignment="Top" Foreground="#FFCCCCCC"/>
-            <Label Content="Primary" HorizontalAlignment="Left" Margin="171,151,0,0" VerticalAlignment="Top" Foreground="#FFCCCCCC"/>
-            <Label Content="Secondary" HorizontalAlignment="Left" Margin="281,151,0,0" VerticalAlignment="Top" Foreground="#FFCCCCCC"/>
+            <Label Content="Spell Casting" HorizontalAlignment="Left" Margin="21,149,0,0" VerticalAlignment="Top" Foreground="#FFCCCCCC" FontWeight="Bold"/>
+            <Label Content="Key/Button" HorizontalAlignment="Left" Margin="239,149,0,0" VerticalAlignment="Top" Foreground="#FFCCCCCC" FontWeight="Bold"/>
+            <ScrollViewer Height="310" Margin="0,175,48,61">
+                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="350">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="195"/>
+                            <ColumnDefinition Width="170"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="24"/>
+                    </Grid.RowDefinitions>
+                        <Label Content="Cast Spell 1" Margin="10,0,0,0" Grid.Row="0" Foreground="#FFCCCCCC" FontSize="11"/>
+                        <Button Content="Q" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" Click="change_Key" />
+                        <Label Content="Cast Spell 2" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="W" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Cast Spell 3" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="E" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Cast Spell 4" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="R" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Level Up Spell 1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="Ctrl Q" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Level Up Spell 2" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="5" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="Ctrl W" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Level Up Spell 3" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="6" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="Ctrl E" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Level Up Spell 4" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="7" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="Ctrl R" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Summoner Spell 1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="8" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="D" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Summoner Spell 2" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="9" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="F" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Self Cast Spell 1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="10" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="Alt Q" Grid.Row="10" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Self Cast Spell 2" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="11" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="Alt W" Grid.Row="11" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Self Cast Spell 3" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="12" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="Alt E" Grid.Row="12" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Self Cast Spell 4" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="13" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="Alt R" Grid.Row="13" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Smart Cast Spell 1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="14" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="Shift Q" Grid.Row="14" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Smart Cast Spell 2" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="15" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="Shift W" Grid.Row="15" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Smart Cast Spell 3" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="16" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="Shift E" Grid.Row="16" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Smart Cast Spell 4" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="17" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="Shift R" Grid.Row="17" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Smart Cast Summoner Spell 1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="18" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="Shift D" Grid.Row="18" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                        <Label Content="Smart Cast Summoner Spell 2" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="19" Foreground="#FFCCCCCC" FontSize="11" />
+                        <Button Content="Shift F" Grid.Row="19" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="22" Margin="36,1,41,1" />
+                </Grid>
+                </ScrollViewer>
+            <Button Content="Save" HorizontalAlignment="Center" VerticalAlignment="Top" Width="75" Margin="172,510,172,0" FontSize="13
+                    " FontWeight="Bold"/>
         </Grid>
     </Grid>
 </Window>

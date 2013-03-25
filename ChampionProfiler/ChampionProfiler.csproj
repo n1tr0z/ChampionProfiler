@@ -101,6 +101,14 @@
     <Resource Include="Images\AhriSquare.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="SettingsResources\settings.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Audio\" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Images\AkaliSquare.png" />
   </ItemGroup>
   <ItemGroup>
@@ -119,15 +127,111 @@
     <Resource Include="Images\AsheSquare.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\AhriLarge.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="SettingsResources\settings.xml">
-      <SubType>Designer</SubType>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Audio\" />
+    <Resource Include="Images\BlitzcrankSquare.png" />
+    <Resource Include="Images\BrandSquare.png" />
+    <Resource Include="Images\CaitlynSquare.png" />
+    <Resource Include="Images\CassiopeiaSquare.png" />
+    <Resource Include="Images\ChampionSquare.png" />
+    <Resource Include="Images\ChoGathSquare.png" />
+    <Resource Include="Images\CorkiSquare.png" />
+    <Resource Include="Images\DariusSquare.png" />
+    <Resource Include="Images\DianaSquare.png" />
+    <Resource Include="Images\DravenSquare.png" />
+    <Resource Include="Images\DrMundoSquare.png" />
+    <Resource Include="Images\EliseSquare.png" />
+    <Resource Include="Images\EvelynnSquare.png" />
+    <Resource Include="Images\EzrealSquare.png" />
+    <Resource Include="Images\FiddlesticksSquare.png" />
+    <Resource Include="Images\FioraSquare.png" />
+    <Resource Include="Images\FizzSquare.png" />
+    <Resource Include="Images\GalioSquare.png" />
+    <Resource Include="Images\GangplankSquare.png" />
+    <Resource Include="Images\GarenSquare.png" />
+    <Resource Include="Images\GragasSquare.png" />
+    <Resource Include="Images\GravesSquare.png" />
+    <Resource Include="Images\HecarimSquare.png" />
+    <Resource Include="Images\HeimerdingerSquare.png" />
+    <Resource Include="Images\IreliaSquare.png" />
+    <Resource Include="Images\JannaSquare.png" />
+    <Resource Include="Images\JarvanIVSquare.png" />
+    <Resource Include="Images\JaxSquare.png" />
+    <Resource Include="Images\JayceSquare.png" />
+    <Resource Include="Images\KarmaSquare.png" />
+    <Resource Include="Images\KarthusSquare.png" />
+    <Resource Include="Images\KassadinSquare.png" />
+    <Resource Include="Images\KatarinaSquare.png" />
+    <Resource Include="Images\KayleSquare.png" />
+    <Resource Include="Images\KennenSquare.png" />
+    <Resource Include="Images\KhaZixSquare.png" />
+    <Resource Include="Images\KogMawSquare.png" />
+    <Resource Include="Images\LeBlancSquare.png" />
+    <Resource Include="Images\LeeSinSquare.png" />
+    <Resource Include="Images\LeonaSquare.png" />
+    <Resource Include="Images\LuluSquare.png" />
+    <Resource Include="Images\LuxSquare.png" />
+    <Resource Include="Images\MalphiteSquare.png" />
+    <Resource Include="Images\MalzaharSquare.png" />
+    <Resource Include="Images\MaokaiSquare.png" />
+    <Resource Include="Images\MasterYiSquare.png" />
+    <Resource Include="Images\MissFortuneSquare.png" />
+    <Resource Include="Images\MordekaiserSquare.png" />
+    <Resource Include="Images\MorganaSquare.png" />
+    <Resource Include="Images\NamiSquare.png" />
+    <Resource Include="Images\NasusSquare.png" />
+    <Resource Include="Images\NautilusSquare.png" />
+    <Resource Include="Images\NidaleeSquare.png" />
+    <Resource Include="Images\NocturneSquare.png" />
+    <Resource Include="Images\NunuSquare.png" />
+    <Resource Include="Images\OlafSquare.png" />
+    <Resource Include="Images\OriannaSquare.png" />
+    <Resource Include="Images\PantheonSquare.png" />
+    <Resource Include="Images\PoppySquare.png" />
+    <Resource Include="Images\QuinnSquare.png" />
+    <Resource Include="Images\RammusSquare.png" />
+    <Resource Include="Images\RenektonSquare.png" />
+    <Resource Include="Images\RengarSquare.png" />
+    <Resource Include="Images\RivenSquare.png" />
+    <Resource Include="Images\RumbleSquare.png" />
+    <Resource Include="Images\RyzeSquare.png" />
+    <Resource Include="Images\SejuaniSquare.png" />
+    <Resource Include="Images\ShacoSquare.png" />
+    <Resource Include="Images\ShenSquare.png" />
+    <Resource Include="Images\ShyvanaSquare.png" />
+    <Resource Include="Images\SingedSquare.png" />
+    <Resource Include="Images\SionSquare.png" />
+    <Resource Include="Images\SivirSquare.png" />
+    <Resource Include="Images\SkarnerSquare.png" />
+    <Resource Include="Images\SonaSquare.png" />
+    <Resource Include="Images\SorakaSquare.png" />
+    <Resource Include="Images\SwainSquare.png" />
+    <Resource Include="Images\SyndraSquare.png" />
+    <Resource Include="Images\TalonSquare.png" />
+    <Resource Include="Images\TaricSquare.png" />
+    <Resource Include="Images\TeemoSquare.png" />
+    <Resource Include="Images\ThreshSquare.png" />
+    <Resource Include="Images\TristanaSquare.png" />
+    <Resource Include="Images\TrundleSquare.png" />
+    <Resource Include="Images\TryndamereSquare.png" />
+    <Resource Include="Images\TwistedFateSquare.png" />
+    <Resource Include="Images\TwitchSquare.png" />
+    <Resource Include="Images\UdyrSquare.png" />
+    <Resource Include="Images\UrgotSquare.png" />
+    <Resource Include="Images\VarusSquare.png" />
+    <Resource Include="Images\VayneSquare.png" />
+    <Resource Include="Images\VeigarSquare.png" />
+    <Resource Include="Images\ViktorSquare.png" />
+    <Resource Include="Images\ViSquare.png" />
+    <Resource Include="Images\VladimirSquare.png" />
+    <Resource Include="Images\VolibearSquare.png" />
+    <Resource Include="Images\WarwickSquare.png" />
+    <Resource Include="Images\WukongSquare.png" />
+    <Resource Include="Images\XerathSquare.png" />
+    <Resource Include="Images\XinZhaoSquare.png" />
+    <Resource Include="Images\YorickSquare.png" />
+    <Resource Include="Images\ZedSquare.png" />
+    <Resource Include="Images\ZiggsSquare.png" />
+    <Resource Include="Images\ZileanSquare.png" />
+    <Resource Include="Images\ZyraSquare.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
